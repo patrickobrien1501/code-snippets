@@ -3,7 +3,7 @@
 
 class Employee:
     
-    # initialize
+    # initialize - the init method runs each time a new instance of the class is created
     def __init__(self, first, last, pay):
         self.first = first
         self.last = last
