@@ -1,4 +1,4 @@
-# Python Object Oriented Programming Tutorial 1 by Corey Schafer
+# Python Object Oriented Programming Tutorial 2 by Corey Schafer
 
 
 class Employee:
@@ -32,8 +32,6 @@ emp_3 = Employee('Chris', 'Dean', 40000)
 
 print(emp_1.fullname())
 print(emp_2.fullname())
-
-print(Employee.fullname(emp_1))
 
 print(emp_1.apply_raise())
 

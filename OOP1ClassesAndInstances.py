@@ -1,6 +1,5 @@
 # Python Object Oriented Programming Tutorial 1 by Corey Schafer
 
-
 class Employee:
     
     # initialize - the init method runs each time a new instance of the class is created
