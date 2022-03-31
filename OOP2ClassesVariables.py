@@ -21,7 +21,7 @@ class Employee:
 
     def apply_raise(self):
         # (1) using self here in front of raise_amount because it should only apply to the instance
-        return self.pay * self.raise_amount 
+        self.pay = int(self.pay * self.raise_amount)
         
 print(Employee.num_of_emps)
 

@@ -25,7 +25,7 @@ class Employee:
     def apply_raise(self):
         # (1) using self here in front of raise_amount because it 
         # should only apply to the instance
-        return self.pay * self.raise_amount 
+        self.pay = int(self.pay * self.raise_amt)
         
     @classmethod
     # automatically accept the class as first argument 
@@ -47,8 +47,8 @@ class Employee:
             return False
         return True
 
-# emp_1 = Employee('Corey', 'Schafer', 50000)
-# emp_2 = Employee('Test', 'User', 60000)
+emp_1 = Employee('Corey', 'Schafer', 50000)
+emp_2 = Employee('Test', 'User', 60000)
 
 # Employee.raise_amt = 1.05
 
