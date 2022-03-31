@@ -1,6 +1,5 @@
 # Python Object Oriented Programming Tutorial 2 by Corey Schafer
 
-
 class Employee:
     
     num_of_emps = 0         # Class Variable - applies to entire class
