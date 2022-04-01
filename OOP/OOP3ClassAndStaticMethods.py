@@ -27,7 +27,7 @@ class Employee:
         # should only apply to the instance
         self.pay = int(self.pay * self.raise_amt)
         
-    @classmethod
+    @classmethod # also called "alternative constructors"
     # automatically accept the class as first argument 
     def set_raise_amount(cls, amount):
         cls.raise_amt = amount
@@ -39,7 +39,7 @@ class Employee:
         # return the new Employee object
         return cls(first, last, pay)
 
-    @staticmethod # also called "alternative constructors"
+    @staticmethod
     # doesn't depend on any speficic instance or the class
     # static methods do not take the class or the instance as arguments
     def is_workday(day):

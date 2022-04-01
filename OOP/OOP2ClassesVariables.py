@@ -13,7 +13,7 @@ class Employee:
         self.email = first + '.' + last + '@company.com'
 
         # (2) Here it makes only sense to apply the number of employees counter to the class itself
-        # and not to an instance
+        # and not to an instance, also runs each time the class is instantiated --> Class variable
         Employee.num_of_emps += 1
     
     def fullname(self):
@@ -21,6 +21,7 @@ class Employee:
 
     def apply_raise(self):
         # (1) using self here in front of raise_amount because it should only apply to the instance
+        # --> instance variable
         self.pay = int(self.pay * self.raise_amount)
         
 print(Employee.num_of_emps)
