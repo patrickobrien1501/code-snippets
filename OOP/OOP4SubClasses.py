@@ -1,4 +1,4 @@
-# Python Object Oriented Programming Tutorial 2 by Corey Schafer
+# Python Object Oriented Programming Tutorial 4 by Corey Schafer
 
 # An example for subclass use could be that there are different types of Employees
 # such as developers and managers. Both would have names, salaries and email adresses

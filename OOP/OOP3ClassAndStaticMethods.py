@@ -1,4 +1,4 @@
-# Python Object Oriented Programming Tutorial 2 by Corey Schafer
+# Python Object Oriented Programming Tutorial 3 by Corey Schafer
 
 class Employee:
     
