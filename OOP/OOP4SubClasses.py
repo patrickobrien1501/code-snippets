@@ -33,9 +33,9 @@ class Developer(Employee): # inherits attributes and methods from Employee
         # Employee.__init__(first, last, pay) would do the same
         self.prog_lang = prog_lang
 
-class Manager(Employee):
+class Manager(Employee): # also inherits all functionalities from Employee class
 
-    def __init__(self, first, last, pay, employees=None): # dont want to pass mutable objects here
+    def __init__(self, first, last, pay, employees=None): # employees = None as we dont want to pass mutable objects to functions
         super().__init__(first, last, pay)
         if employees is None:
             self.employees = []
@@ -51,6 +51,7 @@ class Manager(Employee):
         if emp in self.employees:
             self.employees.remove(emp)
 
+    # print all employees, only takes the instance as argument
     def print_emps(self):
         for emp in self.employees:
             print('-->', emp.fullname())
@@ -70,7 +71,8 @@ mgr_1.print_emps()
 
 print(mgr_1.email)
 
-# Additional Python functions
+# Additional Python functions, here we can play around and see that Managers and Developers are subclasses of 
+# Employee but are independent of each other as they are neither instances or subclasses of each other
 print(isinstance(mgr_1, Manager))
 
 print(issubclass(Developer, Employee))
