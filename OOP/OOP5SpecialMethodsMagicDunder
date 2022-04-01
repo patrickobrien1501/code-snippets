@@ -1,8 +1,16 @@
 # Python Object Oriented Programming Tutorial 5 by Corey Schafer
 
-# An example for subclass use could be that there are different types of Employees
-# such as developers and managers. Both would have names, salaries and email adresses
-# so we can inherit these attributes from the partent class into our subclass
+# Special methods to use in classes. Allow to emulate a certain behaviour in Python. Also how
+# we implement Operator overloading
+#
+# example:
+# print(1 + 2) --> 3
+# print('a' + 'b') --> 'ab'
+
+# We see that the plus operator is behaving differently
+#  Also print(emp_1) --> <__main__.Employee object at 0x000002421723EBB0> is a vague statement
+# We use special methods to adjust these behaviours to our needs
+# Dunder: __init__(): double underscore
 
 class Employee:
     
@@ -21,3 +29,23 @@ class Employee:
     def apply_raise(self):
         # (1) using self here in front of raise_amount because it should only apply to the instance
         self.pay = int(self.pay * self.raise_amt)
+
+    # An unambigious representation of an object. Meant to be used for debugging and logging.
+    # Used to be seen by other developers. (acts as fall-back for __str__())
+    def __repr__(self):
+        return "Employee('{}', '{}', {})".format(self.first, self.last, self.pay)
+
+    # Meant to be a readable representation of the object and used as a display to the end user.
+    def __str__(self):
+        return '{} - {}'.format(self.fullname(), self.email)
+
+    def __add__(self, other):
+        return self.pay + other.pay
+
+emp_1 = Employee('Corey', 'Schafer', 50000)
+emp_2 = Employee('Test', 'User', 60000)
+
+print(emp_1.__repr__())
+print(emp_1.__str__())
+
+print(emp_1 + emp_2)
