@@ -8,7 +8,7 @@
 # print('a' + 'b') --> 'ab'
 
 # We see that the plus operator is behaving differently
-#  Also print(emp_1) --> <__main__.Employee object at 0x000002421723EBB0> is a vague statement
+# Also print(emp_1) --> <__main__.Employee object at 0x000002421723EBB0> is a vague statement
 # We use special methods to adjust these behaviours to our needs
 # Dunder: __init__(): double underscore
 
